@@ -37,7 +37,7 @@ export default function About() {
       </p>
       <p className='mt-4'>
         GitHub repository can be found{' '}
-        <Link href="github.com/rivea0/celestius" className='text-emerald-600 font-semibold hover:underline'>here</Link>.
+        <Link href="https://github.com/rivea0/celestius" className='text-emerald-600 font-semibold hover:underline'>here</Link>.
       </p>
       <div className='mt-8'>
       <h2 className='text-xl'>Credits</h2>
