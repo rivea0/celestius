@@ -4,7 +4,7 @@ import { Merienda } from 'next/font/google'
 import { useFormState } from 'react-dom'
 import { handleSubmit } from '../actions'
 import AskForm from '../components/AskForm'
-import InsightPage from '../insight/page'
+import Insight from '../components/Insight'
 
 const merienda = Merienda({ subsets: ['latin'], weight: '400' })
 const initialState = {
@@ -33,7 +33,7 @@ function Result({ output }: { output: string }) {
   return (
     <div className={`md:px-40 p-4 ${merienda.className}`}>
       {res ? (
-        <InsightPage text={JSON.parse(output)} />
+        <Insight text={JSON.parse(output)} />
       ) : (
         <div className="text-red-600">Something went wrong!</div>
       )}

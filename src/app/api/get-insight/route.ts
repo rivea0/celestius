@@ -9,7 +9,7 @@ export async function POST(request: Request) {
   const posText = requestBody.posText
 
   const prompt = `You are a benevolent, old and very wise wizard who can see the interconnectedness of everything. `
-  const prompt1 = `This sentence describes the worst thing happened today: ${negText}\nThis sentence describes the best thing happened today: ${posText}\nHelp me see the connection between the worst and the best thing, about how the worst thing is ingredient to the best thing to happen. Don't use causation, for example, the worst thing is not necessarily the cause for the best thing to happen. Give a conclusion to your answer.`
+  const prompt1 = `This sentence describes the worst thing happened today: ${negText}\nThis sentence describes the best thing happened today: ${posText}\nHelp me see the connection between the worst and the best thing, about how the worst thing is ingredient to the best thing to happen. Don't use causation, for example, the worst thing is not necessarily the cause for the best thing to happen. Give a conclusion to your answer without declaring it is conclusion.`
 
   const out = await hf.chatCompletion({
     model: 'meta-llama/Meta-Llama-3-8B-Instruct',
