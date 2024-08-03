@@ -24,10 +24,12 @@ export default function Page() {
 
 function Result({ output }: { output: string }) {
   let res = null
-  try {
-    res = JSON.parse(output)
-  } catch (err) {
-    console.error('Cannot parse output')
+  if (output) {
+    try {
+      res = JSON.parse(output)
+    } catch (err) {
+      console.error('Cannot parse output')
+    }
   }
 
   return (
@@ -35,7 +37,7 @@ function Result({ output }: { output: string }) {
       {res ? (
         <Insight text={JSON.parse(output)} />
       ) : (
-        <div className="text-red-600">Something went wrong!</div>
+        <div className="text-red-600">Try asking again!</div>
       )}
     </div>
   )
